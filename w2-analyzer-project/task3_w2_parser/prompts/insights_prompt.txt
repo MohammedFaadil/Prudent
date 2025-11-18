@@ -1,0 +1,58 @@
+GENERATE W-2 INSIGHTS AND VALIDATION
+
+Based on the extracted W-2 data below, provide 5-8 concise, actionable insights focusing on data validation, tax analysis, and potential issues.
+
+EXTRACTED DATA:
+{extracted_data}
+
+EMPLOYEE ADDRESS:
+{employee_address}
+
+Generate insights covering these areas:
+
+1. ADDRESS VALIDATION
+   - ZIP code and state consistency
+   - Address completeness
+   - US postal format compliance
+
+2. TAX WITHHOLDING ANALYSIS  
+   - Federal withholding percentage of Box 1 wages
+   - Comparison to typical tax brackets
+   - Unusually high/low withholding flags
+
+3. SOCIAL SECURITY & MEDICARE
+   - Social Security wage cap proximity
+   - Consistency between Box 1, 3, and 5
+   - Medicare wages vs Social Security wages
+
+4. MULTI-STATE CONSIDERATIONS
+   - Multiple state income reporting
+   - State tax withholding patterns
+   - Employer state registration
+
+5. DATA QUALITY & COMPLETENESS
+   - Missing critical boxes
+   - Inconsistent values across boxes
+   - Unusual patterns or outliers
+
+6. FOLLOW-UP ACTIONS
+   - Local tax filing requirements
+   - Documentation verification needed
+   - Professional consultation suggestions
+
+FORMAT REQUIREMENTS:
+- Return ONLY valid JSON with "insights" key containing array of strings
+- Each insight should start with bullet point: "• "
+- Be factual, concise, and helpful
+- Maximum 8 insights total
+
+EXAMPLE RESPONSE:
+{
+  "insights": [
+    "• Address validation: ZIP code 10001 corresponds to NY state",
+    "• Federal withholding at 22% of Box 1 wages, within typical range", 
+    "• Social Security wages below annual limit",
+    "• Single state income reported with consistent withholding",
+    "• All critical W-2 boxes present and properly filled"
+  ]
+}
