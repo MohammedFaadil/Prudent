@@ -124,24 +124,38 @@ Example Output:
 PROJECT STRUCTURE
 -----------------
 w2-analyzer-project/
-├── task1_price_gap/          # Algorithm implementation
+├── task1_price_gap/              # Task 1: Algorithm implementation
+│   ├── __init__.py
 │   ├── price_gap.py
 │   └── test_price_gap.py
-├── task2_api/                # FastAPI web service
+├── task2_api/                    # Task 2: FastAPI web service
+│   ├── __init__.py
 │   ├── main.py
+│   ├── dependencies.py
 │   ├── routes/
+│   │   ├── __init__.py
 │   │   ├── price_gap.py
 │   │   └── movies.py
 │   └── tests/
-├── task3_w2_parser/          # AI W-2 processor
+│       ├── __init__.py
+│       ├── test_price_gap_api.py
+│       └── test_movies_api.py
+├── task3_w2_parser/              # Task 3: AI W-2 processor
+│   ├── __init__.py
 │   ├── w2_parser.py
 │   ├── gemini_client.py
 │   ├── run_parser.py
 │   ├── prompts/
+│   │   ├── extraction_prompt.txt
+│   │   └── insights_prompt.txt
+│   ├── test_data/
+│   │   └── sample_w2.pdf
 │   └── tests/
-├── requirements.txt          # All dependencies
-├── .env.example             # Environment template
-└── README.txt              # This file
+│       ├── __init__.py
+│       └── test_w2_parser.py
+├── requirements.txt              # All dependencies
+├── .env.example                  # Environment template
+└── README.txt                   # This file
 
 ENVIRONMENT VARIABLES
 ---------------------
